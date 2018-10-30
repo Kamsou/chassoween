@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import './Home.css';
+import Header from "./header.js";
+import Inputbutton from './inputbutton';
 
 
 class Home extends Component {
     render() {
         return (
-            <h2 className="intro">
+            <div className="intro">
+            <Header />
+             <div className="instruction">
                 <p>Vous aimez vous faire peur ? </p>
                 <p>Vous aimez les friandises ? </p>
                 <p>Si la réponse à ces deux questions est OUI, bienvenue sur Chasso'Ween !</p>
@@ -15,7 +19,12 @@ class Home extends Component {
                 <p> Une fois le code découvert vous aurez accès à l'adresse à laquelle vous devrez vous rendre pour récupérer vos délicieux gains !</p>
                 <p>Compris !? </p>
                 <p> À vous de jouer ! ( Âmes sensibles s'abstenir ... )</p>
-            </h2>
+
+                <br/>
+                <br/>
+                <Inputbutton />
+         </div>
+            </div>
         )
     }
 }

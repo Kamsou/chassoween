@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "./page2.css";
 import Buttonprevious from './buttonprevious';
-
+import Inputbutton from './inputbutton';
 class Page2 extends Component {
     render() {
         return (
@@ -14,6 +14,7 @@ class Page2 extends Component {
 
 
                 {/* CHAMP INPUT DE MATMAT92*/}
+              <Inputbutton />
 
             </div>
         );
