@@ -20,7 +20,7 @@ class Inputbutton extends Component {
                 <img src={dent} style={pStyle} width="250px" class="animated infinite bounce" ></img>
                 <form>
   <label >
-    <p class="animated flipOutY duration-3s" style={white}>tape ton texte</p>
+    <p class="" style={white}>tape ton texte</p>
         <input type="text" placeholder="konami code" class="animated infinite jello" className="Barre2input"/>
             </label>
             

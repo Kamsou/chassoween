@@ -11,3 +11,36 @@ h1{
     src: url('./police/csnpwdt\ NFI.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;}
+
+.App {
+text-align: center;
+}
+
+.App-logo {
+    height: 20vmin;
+}
+
+.App-header {
+    background-color: black;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    margin-top: 3%;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(360deg);
+    }
+}
