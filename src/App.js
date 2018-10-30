@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
 import './App.css';
 import Page2 from './Components/page2';
-import Header from './Components/header';
-import Inputbutton from './Components/inputbutton';
 
 import Home from './Components/Home';
 
@@ -18,6 +16,8 @@ class App extends Component {
             </li>
             <li>
               <Link to="/page2">Page2</Link>
+
+              <Link to="/page3">Page3</Link>
             </li>
           </ul>
 
@@ -25,7 +25,7 @@ class App extends Component {
 
             <Route exact path="/" component={Home}/>
             <Route exact path="/page2" component={Page2} />
-
+{/* <Route exact path="/page3" component={}/> */}
           </Switch>
 
 {/* CONSIGNES POUR LES NOOBS */}

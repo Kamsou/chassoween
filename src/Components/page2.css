@@ -11,3 +11,11 @@ src: url('./police/MYBLS___.TTF') format('truetype');
 font-weight: normal;
 font-style: normal;
 }
+
+.page2_div{
+    text-align:center;
+}
+
+.matmat92wesh{
+    margin-top: 50px;
+}
