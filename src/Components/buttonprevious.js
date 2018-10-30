@@ -7,7 +7,7 @@ class Buttonprevious extends Component {
     render() {
         return (
             <div className="buttonprevious_div">
-                <button> <Link to="/"> <img className="icon_previous" src={left} alt="" /></Link> </button>
+                <button className="buttonprevious"> <Link to="/"> <img className="icon_previous" src={left} alt="" /></Link> </button>
             </div>
 
 

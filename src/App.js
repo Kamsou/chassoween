@@ -3,7 +3,7 @@ import { Route, Switch, Link } from 'react-router-dom';
 import './App.css';
 import Page2 from './Components/page2';
 import Header from './Components/header';
-
+import Home from './Components/Home';
 
 class App extends Component {
   render() {
@@ -21,7 +21,7 @@ class App extends Component {
 
           <Switch>
 
-            <Route exact path="/"/>
+            <Route exact path="/" component={Home}/>
             <Route exact path="/page2" component={Page2} />
 
           </Switch>
