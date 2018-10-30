@@ -1,6 +1,5 @@
 .container {
     display: grid;
-    border: 2px dashed rgba(114, 186, 94, 0.35);
     height: 350px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -8,12 +7,7 @@
     color: grey;
   }
   .item {
-    width: 90%;
-    height: 90%;
-    background: rgba(219, 43, 20, 0.4);
-    border: 2px dashed rgba(219, 43, 20, 0.5);
-    font-size: 14px;
-    text-align: center
+    width: 100%;
   }
 
   h2 {

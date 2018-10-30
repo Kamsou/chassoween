@@ -7,10 +7,8 @@ const CandyList = ({ candies }) => {
       <div className="container">
         {candies.slice(0, 6).map(e => (
           <>
-            <div className="item">
-              <div>{e.product_name}</div>
-              <div className="brands">{e.brands}</div>
-              {e.image_thumb_url && <img src={e.image_thumb_url} alt=""/>}
+            <div>
+              {e.image_thumb_url && <img className="item" src={e.image_thumb_url} alt=""/>}
             </div>
           </>
         ))}
