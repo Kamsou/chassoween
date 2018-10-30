@@ -1,0 +1,13 @@
+.Gif img {
+    max-width: 100%;
+    height: 20rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+} @media screen and (max-width: 650px) {
+    .Gif1 img {
+        max-width: 100%;
+        height: auto;
+    }
+}
