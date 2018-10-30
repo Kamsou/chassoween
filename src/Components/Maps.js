@@ -1,5 +1,5 @@
 import React from 'react'
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Map, TileLayer, Marker} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import './Maps.css';
@@ -93,9 +93,11 @@ class SimpleExample extends React.Component {
 
     if (this.state.latlng) {
       return (
-        <>
-        <div className="title-adresse">
-        <h2>{this.state.adresse}</h2></div>
+       <div>
+        <div className="title-adresse"> 
+        <h3>Récompenses disponibles à cette adresse : </h3>
+         <h2 className="adressh2">{this.state.adresse}</h2>
+       </div>
         <div className="map">
           <Map center={position} style={{ width: '100%', height: '40vh'}} zoom={this.state.zoom}>
             <TileLayer
@@ -105,12 +107,13 @@ class SimpleExample extends React.Component {
             <Marker position={position} className="map__reactleaflet">
 
             </Marker>
+            
           </Map>
 
 
         </div>
         <Candy/>
-        </>
+        </div>
       );
     } else { return (<div></div>) }
   }

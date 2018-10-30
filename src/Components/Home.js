@@ -18,9 +18,7 @@ class Home extends Component {
                     <p> Une fois le code découvert vous aurez accès à l'adresse à laquelle vous devrez vous rendre pour récupérer vos délicieux gains !</p>
                     <p>Compris !? </p>
                     <p> À vous de jouer ! ( Âmes sensibles s'abstenir ... )</p>
-
-                    <br />
-                    <br />
+                    
                     <div className="matmat92wesh"><Inputbutton /></div>
                 </div>
             </div>
