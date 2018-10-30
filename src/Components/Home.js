@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Home.css';
-// import Header from "./header.js";
 import Inputbutton from './inputbutton';
 
 
@@ -8,7 +7,6 @@ class Home extends Component {
     render() {
         return (
             <div className="intro">
-            {/* <Header /> */}
              <div className="instruction">
                 <p>Vous aimez vous faire peur ? </p>
                 <p>Vous aimez les friandises ? </p>

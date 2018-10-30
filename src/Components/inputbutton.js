@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import "./inputbutton.css";
-import logo1 from "../Image/baseline-input-24px.svg";
 import dent from "../Image/dents.png";
 import dentreverse from "../Image/dentsreverse.png";
 
