@@ -13,8 +13,15 @@
     background: rgba(219, 43, 20, 0.4);
     border: 2px dashed rgba(219, 43, 20, 0.5);
     font-size: 14px;
+    text-align: center
   }
 
+  h2 {
+    font-size: 2em;
+    font-family: "Halloweenpolice";
+    color: rgb(150, 18, 18);
+    text-align: center;
+}
   h3 {
     font-size: 1em;
     font-family: "Halloweenpolice";

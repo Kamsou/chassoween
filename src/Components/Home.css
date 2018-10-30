@@ -1,7 +1,12 @@
-.intro {
+.instruction {
     color:white;
     background-color: #000000;
     font-family: 'Montserrat', sans-serif;
+    text-align:center;
+}
+
+.intro {
+    margin-top: 10%;
 }
 
 .link {

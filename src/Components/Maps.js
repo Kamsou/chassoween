@@ -26,7 +26,7 @@ L.Icon.Default.mergeOptions({
 class SimpleExample extends React.Component {
 
   state = {
-    adresse: this.props.match.params.adresse,
+    adresse: "",
     latlng: "", 
     zoom: 15,
   }
