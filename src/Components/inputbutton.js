@@ -16,15 +16,15 @@ class Inputbutton extends Component {
     render() {
         return (
             <div className="entier">
-                <img src={dent} style={pStyle} width="250px" class="animated infinite bounce" alt="" ></img>
+                <img src={dent} style={pStyle} width="50%" class="animated infinite bounce" alt="" ></img>
                 <form>
   <label >
-    <p class="" style={white}>tape ton texte</p>
+    <p class="animated flipOutY delay-1s" style={white}>tape ton texte</p>
         <input type="text" placeholder="konami code" class="animated infinite jello" className="Barre2input"/>
             </label>
             
             </form>
-            <img src={dentreverse} style={pStyle} width="250px" class="animated infinite slideInUp" alt=""></img>
+            <img src={dentreverse} style={pStyle} width="50%" class="animated infinite slideInUp" alt=""></img>
 
              </div>
                     )

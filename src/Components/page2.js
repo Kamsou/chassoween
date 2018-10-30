@@ -14,7 +14,9 @@ class Page2 extends Component {
 
 
                 {/* CHAMP INPUT DE MATMAT92*/}
-              <Inputbutton />
+                <div className="matmat92wesh">
+                <Inputbutton />
+                </div>
 
             </div>
         );
