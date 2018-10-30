@@ -7,12 +7,13 @@ import Niveau from './Components/Niveau';
 
 
 class App extends Component {
+  
   render() {
     return (
       <div className="Entier">
         <Header />
         <Home />
-        <Niveau />
+
         <Maps/>
 
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Home.css';
-import Inputbutton from './inputbutton';
+import Niveau from './Niveau';
 
 
 class Home extends Component {
@@ -19,7 +19,7 @@ class Home extends Component {
                     <p>Compris !? </p>
                     <p> À vous de jouer ! ( Âmes sensibles s'abstenir ... )</p>
                     
-                    <div className="matmat92wesh"><Inputbutton /></div>
+                    <div className="matmat92wesh"><Niveau /></div>
                 </div>
             </div>
         )
