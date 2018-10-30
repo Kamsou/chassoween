@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import "./header.css";
-import Logo from '../img/logo-ween.png'
+import React from 'react';
+import './Header.css';
+import logo from '../img/logo-ween.png';
 
-
-class Header extends Component {
+class Header extends React.Component {
     render() {
-        return (
+        return(
             <div className="App">
             <header className="App-header">
-                <img src={Logo} className="App-logo" alt="logo" />
+                <img src={logo} className="App-logo" alt="logo" />
             </header>
             </div>
         )
