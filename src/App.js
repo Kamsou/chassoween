@@ -3,13 +3,15 @@ import { Route, Switch, Link } from 'react-router-dom';
 import './App.css';
 import Page2 from './Components/page2';
 import Header from './Components/header';
+import Inputbutton from './Components/inputbutton';
+
 import Home from './Components/Home';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-       <Header />
+     
           <ul>
             <li>
               <Link to="/">Home</Link>
