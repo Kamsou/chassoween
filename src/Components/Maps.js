@@ -31,13 +31,31 @@ class SimpleExample extends React.Component {
     zoom: 15,
   }
 
+  shuffle=(array)=> {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+  
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+  
+    return array;
+  }
 
   async componentDidMount(){
 
     
       try {
         const response = await fetch(
-          `https://api-adresse.data.gouv.fr/search/?q=${this.state.adresse}&limit=1`
+          `https://api-adresse.data.gouv.fr/search/?q=Paris&postcode=75005&limit=20`
         );
   
         if (!response.ok) { // dans le cas où la requete api échoue, afficher une erreur
@@ -45,12 +63,15 @@ class SimpleExample extends React.Component {
           throw Error(response.statusText);
         }
   
-        const api_data = await response.json();
-        //console.log(api_data)
+        let api_data = await response.json();
+        api_data=api_data.features
+        api_data = this.shuffle(api_data);
+
+        console.log(api_data)
         this.setState({
           error: false,
-          adresse: api_data.features[0].properties.label,
-          latlng:api_data.features[0].geometry.coordinates[1]+','+api_data.features[0].geometry.coordinates[0]
+          adresse: api_data[0].properties.label,
+          latlng:api_data[0].geometry.coordinates[1]+','+api_data[0].geometry.coordinates[0]
         });
         //console.log(this.state.latlng)
       }

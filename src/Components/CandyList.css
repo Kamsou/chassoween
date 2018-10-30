@@ -5,11 +5,19 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     background: rgba(114, 186, 94, 0.05);
+    color: grey;
   }
   .item {
     width: 90%;
     height: 90%;
-    background: rgba(255, 213, 70, 0.4);
-    border: 2px dashed rgba(236, 198, 48, 0.5);
+    background: rgba(219, 43, 20, 0.4);
+    border: 2px dashed rgba(219, 43, 20, 0.5);
     font-size: 14px;
   }
+
+  h3 {
+    font-size: 1em;
+    font-family: "Halloweenpolice";
+    color: rgb(150, 18, 18);
+    text-align: center;
+}

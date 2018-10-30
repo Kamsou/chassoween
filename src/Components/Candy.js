@@ -37,17 +37,19 @@ class Candy extends React.Component {
         const response = await fetch(
           `https://fr-en.openfoodfacts.org/category/confectioneries.json`
         );
-        console.log('ee')
+        //console.log('ee')
         if (!response.ok) { // dans le cas où la requete api échoue, afficher une erreur
           this.setState({ error: true });
           throw Error(response.statusText);
         }
   
         const api_data = await response.json();
+        const products = api_data.products;
+        const candies = products.filter(candy => {if(candy.image_url) return candy})
         console.log(api_data)
         this.setState({
           error: false,
-          candiesList: this.shuffle(api_data.products)
+          candiesList: this.shuffle(candies)
         });
         console.log(this.state.candiesList)
       }
