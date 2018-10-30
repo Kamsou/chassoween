@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Home.css';
-import Header from "./header.js";
 import Inputbutton from './inputbutton';
 
 

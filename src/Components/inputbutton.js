@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import "./inputbutton.css";
-import logo1 from "../Image/baseline-input-24px.svg";
 import dent from "../Image/dents.png";
 import dentreverse from "../Image/dentsreverse.png";
 
@@ -17,7 +16,7 @@ class Inputbutton extends Component {
     render() {
         return (
             <div className="entier">
-                <img src={dent} style={pStyle} width="250px" class="animated infinite bounce" ></img>
+                <img src={dent} style={pStyle} width="250px" class="animated infinite bounce" alt=""></img>
                 <form>
   <label >
     <p class="" style={white}>tape ton texte</p>
@@ -25,7 +24,7 @@ class Inputbutton extends Component {
             </label>
             
             </form>
-            <img src={dentreverse} style={pStyle} width="250px" class="animated infinite slideInUp"></img>
+            <img src={dentreverse} style={pStyle} width="250px" class="animated infinite slideInUp" alt=""></img>
 
              </div>
                     )
