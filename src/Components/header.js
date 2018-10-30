@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "./header.css";
 
 
-class Page1 extends Component {
+class Header extends Component {
     render() {
         return (<div className="page1_div">
             
@@ -14,4 +14,4 @@ class Page1 extends Component {
     }
 }
 
-export default Page1;
+export default Header;
