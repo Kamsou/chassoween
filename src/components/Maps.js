@@ -3,6 +3,7 @@ import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import './Maps.css';
+import Candy from "./Candy"
 
 const styles = theme => ({
   button: {
@@ -14,10 +15,10 @@ const styles = theme => ({
 });
 
 
-delete L.Icon.Default.prototype._getIconUrl;
+delete L.Icon.Default.prototype._getIconUrl;  // workaround to fix bug marker icon not showing
 
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),  // see details : https://github.com/PaulLeCam/react-leaflet/issues/453
   iconUrl: require('leaflet/dist/images/marker-icon.png'),
   shadowUrl: require('leaflet/dist/images/marker-shadow.png')
 });
@@ -26,7 +27,7 @@ class SimpleExample extends React.Component {
 
   state = {
     adresse: this.props.match.params.adresse,
-    latlng: "", //|| 48.866667,
+    latlng: "", 
     zoom: 15,
   }
 
@@ -48,7 +49,6 @@ class SimpleExample extends React.Component {
         //console.log(api_data)
         this.setState({
           error: false,
-          responseDisplay: true,
           adresse: api_data.features[0].properties.label,
           latlng:api_data.features[0].geometry.coordinates[1]+','+api_data.features[0].geometry.coordinates[0]
         });
@@ -76,7 +76,7 @@ class SimpleExample extends React.Component {
         <div className="title-adresse">
         <h2>{this.state.adresse}</h2></div>
         <div className="map">
-          <Map center={position} style={{ width: '100%', height: '80vh'}} zoom={this.state.zoom}>
+          <Map center={position} style={{ width: '100%', height: '40vh'}} zoom={this.state.zoom}>
             <TileLayer
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
@@ -87,7 +87,9 @@ class SimpleExample extends React.Component {
           </Map>
 
 
-        </div></>
+        </div>
+        <Candy/>
+        </>
       );
     } else { return (<div></div>) }
   }
