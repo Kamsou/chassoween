@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+import Maps from "./Components/Maps";
+import Home from './Components/Home';
 import Header from './Components/Header';
 import Niveau from './Components/Niveau';
-import Home from './Components/Home'
 
 
 class App extends Component {
@@ -12,11 +13,13 @@ class App extends Component {
         <Header />
         <Home />
         <Niveau />
+        <Maps/>
 
 
       </div>
     );
   }
 }
+
 
 export default App;
