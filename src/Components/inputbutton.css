@@ -1,0 +1,17 @@
+.entier {
+    background-color: black;
+}
+
+.Barre2input{
+ 
+ background-color: transparent;
+ border: none;
+ text-align: center;
+ color: white;
+}
+
+.Barre2input:focus {
+    border: none;
+    text-decoration: none;
+    outline-style: none;
+}
