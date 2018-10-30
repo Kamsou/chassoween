@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+    font-family: "burkpolice";
+    font-size:3em;
+    color:rgb(150, 18, 18);
+    background-color: black;
+}
+
+@font-face {
+    font-family: 'burkpolice';
+    src: url('./police/csnpwdt\ NFI.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;}

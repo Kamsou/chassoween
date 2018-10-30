@@ -1,0 +1,13 @@
+h2{
+font-size: 2em;
+font-family: "Halloweenpolice";
+color:rgb(150, 18, 18);
+text-align: center;
+}
+
+@font-face {
+font-family: 'Halloweenpolice';
+src: url('./police/MYBLS___.TTF') format('truetype');
+font-weight: normal;
+font-style: normal;
+}

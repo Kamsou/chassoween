@@ -1,3 +1,11 @@
 .black {
     background-color: black;
 }
+html  {
+  background-color: black;
+}
+ul{
+  list-style:none;
+  margin-left:0;
+  padding-left:0;
+}
