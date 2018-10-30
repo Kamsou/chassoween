@@ -12,7 +12,6 @@ class Page2 extends Component {
                 </div>
                 {/* IMAGE RANDOM DE NICO */}
 
-
                 {/* CHAMP INPUT DE MATMAT92*/}
                 <div className="matmat92wesh">
                 <Inputbutton />
