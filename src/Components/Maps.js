@@ -4,6 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import './Maps.css';
 import Candy from "./Candy"
+import right from "./icon/arrow-alt-circle-right-regular.svg";
 
 const styles = theme => ({
   button: {
@@ -94,7 +95,7 @@ class SimpleExample extends React.Component {
       return (
        <div>
         <div className="title-adresse"> 
-        <button onClick={this.props.suivant}>Suivant</button>
+        <button className="buttonnext" onClick={this.props.suivant}> <img className="icon_next" src={right} alt="" />Suivant</button>
         <h3>Récompenses disponibles à cette adresse : </h3>
          <h2 className="adressh2">{this.state.adresse}</h2>
        </div>
