@@ -1,17 +1,29 @@
 .Gif img {
-    max-width: 100%;
-    height: 20rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5%;
-} @media screen and (max-width: 650px) {
-    .Gif1 img {
-        max-width: 100%;
-        height: auto;
+    width: 100%;
+    z-index: -1;
+  
+}
+ @media only screen and (max-width: 650px) {
+    .Gif img {
+        width: 100%;
     }
 }
 
 .html {
     background-color: black;
+}
+
+.champsinput {
+    
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    color: white;
+       
+}
+
+.champsinput:hover {
+    border: none;
+    text-decoration: none;
+    outline-style: none;
 }
