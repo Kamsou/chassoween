@@ -6,61 +6,92 @@ import Header from "./Components/Header";
 import Niveau from "./Components/Niveau";
 import dent from "./Image/dents.png";
 import dentreverse from "./Image/dentsreverse.png";
+import Niveau1 from './img/Niveau1.gif';
+import Niveau2 from './img/Niveau2.gif';
+import Niveau3 from './img/Puppet.gif';
+import Niveau4 from './img/Scream.gif';
+import Niveau5 from './img/SilenceLamb.gif';
+import Niveau6 from './img/ToyStoryShinning.gif';
+import Niveau7 from './img/freddy.gif';
+import Niveau8 from './img/esther.gif';
+import Niveau9 from './img/chucky.gif';
 
 let map = undefined;
 
 class App extends Component {
   state = {
     visible: false,
-    visible2: false,
-    visible3: false,
     instruction: true,
-    enigma: undefined
+    enigma: undefined,
+    map: false,
+    
+    tableau: [
+      Niveau1,
+      Niveau2,
+      Niveau3,
+      Niveau4,
+      Niveau5,
+      Niveau6,
+      Niveau7,
+      Niveau8,
+      Niveau9
+    ],
+    tableaureponse: [
+      "Youpi",
+      "qe3d4",
+      "Puppet",
+      "Scream",
+      "Naked",
+      "shining",
+      "freddy",
+      "esther",
+      "chucky"
+
+      
+    ],
+    indice: Math.floor(Math.random() * 9),
   };
+
+
+  
   konami = e => {
     const input = e.target.value;
     const start = "Start";
-    const test1 = "Youpi";
-    const test2 = "qe3d4";
     if (input.toString().toLowerCase() === start.toString().toLowerCase()) {
       this.setState({
-        visible: true,
-        visible2: false,
-        instruction: false
+        map: false,
+        instruction: false,
+        visible:true,
+        indice:Math.floor(Math.random() * 9)
+
       });
     } else if (
-      input.toString().toLowerCase() === test1.toString().toLowerCase()
+      input.toString().toLowerCase() === this.state.tableaureponse[this.state.indice].toString().toLowerCase()
     ) {
       this.setState({
-        visible: false,
-        visible2: true,
-        instruction: false
+        map: true,
+        instruction: false,
+        visible:false
       });
-    } else if (
-      input.toString().toLowerCase() === test2.toString().toLowerCase()
-    ) {
-      this.setState({
-        visible: false,
-        visible2: false,
-        visible3: true,
-        visible4: false,
-        instruction: false
-      });
-    }
+    } 
   };
 
   getNext = () => {
     map = undefined;
+    let randomIndex=Math.floor(Math.random() * 9)
+    while (randomIndex===this.state.indice) 
+      randomIndex=Math.floor(Math.random() * 9)
     this.setState({
-      visible2: false,
-      visible3: false,
-      visible4: true,
-      instruction: false
+      visible: true,
+      instruction: false,
+      map:false,
+      indice:randomIndex
     });
+    
   };
 
   render() {
-    if (this.state.visible2 || this.state.visible3) {
+    if (this.state.map) {
       map = <Maps suivant={this.getNext} />;
     }
 
@@ -73,12 +104,10 @@ class App extends Component {
             <Home />
           </div>
         )}
-
+        {console.log(this.state.tableau)}
         <Niveau
+          image={this.state.tableau[this.state.indice]}
           visible={this.state.visible}
-          visible2={this.state.visible2}
-          visible3={this.state.visible3}
-          visible4={this.state.visible4}
         />
         <div className="bouche">
           <img
