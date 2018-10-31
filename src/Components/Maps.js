@@ -5,6 +5,9 @@ import L from 'leaflet';
 import './Maps.css';
 import Candy from "./Candy"
 import right from "./icon/arrow-alt-circle-right-regular.svg";
+import ghost from "./icon/ghost-solid.svg";
+import {Animated} from "react-animated-css";
+
 
 const styles = theme => ({
   button: {
@@ -97,7 +100,10 @@ class SimpleExample extends React.Component {
         <div className="title-adresse"> 
         <button className="buttonnext" onClick={this.props.suivant}> <img className="icon_next" src={right} alt="" />Suivant</button>
         <h3>Récompenses disponibles à cette adresse : </h3>
-         <h2 className="adressh2">{this.state.adresse}</h2>
+
+        
+       
+         <h2 className="adressh2"> <Animated animationIn="infinite jello " animationOut="infinite jello " ><img className="ghosticon" src={ghost} alt="ghosti"/></Animated> {this.state.adresse}</h2>
        </div>
         <div className="map">
           <Map center={position} style={{ width: '100%', height: '40vh'}} zoom={this.state.zoom}>
