@@ -14,16 +14,16 @@
 }
 
 .champsinput {
-    
+
     background-color: transparent;
     border: none;
     text-align: center;
     color: white;
-       
-}
-
-.champsinput:hover {
+    
+    }
+    
+    .champsinput:hover {
     border: none;
     text-decoration: none;
     outline-style: none;
-}
+    }
