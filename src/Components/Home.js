@@ -1,13 +1,37 @@
 import React, { Component } from 'react';
 import './Home.css';
-import Niveau from './Niveau';
+import {Animated} from "react-animated-css";
 
 
 class Home extends Component {
+
+    state = {
+        instruction: true
+                
+      }
+      konami = (e) =>  {
+        e.preventDefault()
+        const penis = e.target.value
+        const prepuce = "yes"
+        const cacaOuette = "test"
+        if (penis.toString() === prepuce.toString()){
+          this.setState({
+            instruction : false
+            
+            
+          })
+        }
+        else if (penis.toString() === cacaOuette.toString()){
+            this.setState({
+              instruction : false
+          
+            })
+          }
+      }
     render() {
         return (
             <div className="intro">
-              
+              <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={this.state.instruction}>
                 <div className="instruction">
                     <p>Vous aimez vous faire peur ? </p>
                     <p>Vous aimez les friandises ? </p>
@@ -19,8 +43,10 @@ class Home extends Component {
                     <p>Compris !? </p>
                     <p> À vous de jouer ! ( Âmes sensibles s'abstenir ... )</p>
                     
-                    <div className="matmat92wesh"><Niveau /></div>
+                    
+                    
                 </div>
+                </Animated>
             </div>
         )
     }
