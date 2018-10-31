@@ -88,13 +88,13 @@ class SimpleExample extends React.Component {
   render() {
 
     const position = this.state.latlng.split(',');
-    const { classes } = this.props;
 
 
     if (this.state.latlng) {
       return (
        <div>
         <div className="title-adresse"> 
+        <button onClick={this.props.suivant}>Suivant</button>
         <h3>Récompenses disponibles à cette adresse : </h3>
          <h2 className="adressh2">{this.state.adresse}</h2>
        </div>
@@ -107,9 +107,8 @@ class SimpleExample extends React.Component {
             <Marker position={position} className="map__reactleaflet">
 
             </Marker>
-            
           </Map>
-
+          
 
         </div>
         <Candy/>

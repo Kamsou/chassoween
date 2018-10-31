@@ -4,8 +4,6 @@ import Niveau2 from '../img/Niveau2.gif';
 import './Niveau.css'
 import "./inputbutton.css";
 
-import {Animated} from "react-animated-css";
-
 
 
 
@@ -23,7 +21,9 @@ class Niveau extends React.Component {
                 {this.props.visible2 && <div className="Gif">
                     <img src={Niveau2} alt="Citrouille dégoulinante"></img>
                 </div>}
-                
+                {this.props.visible4 && <div className="Gif">
+                    <img src="https://via.placeholder.com/150" alt="Citrouille dégoulinante"></img>
+                </div>}
                 
             </div>
         )
